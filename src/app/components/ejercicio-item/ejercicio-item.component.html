@@ -1,0 +1,29 @@
+
+<ion-card>
+  <ion-item>
+    <ion-label>
+      <h2>{{ ejercicio.nombre }}</h2>
+      <p>Grupo muscular: {{ ejercicio.grupoMuscular }}</p>
+      <p>Dificultad: {{ ejercicio.dificultad }}</p>
+    </ion-label>
+  </ion-item>
+
+  <ion-card-content>
+    <p>{{ ejercicio.descripcion }}</p>
+
+    <p *ngIf="ejercicio.favorito">
+      ⭐ Ejercicio favorito
+    </p>
+
+    <p>
+      Registrado:
+      {{ ejercicio.fechaRegistro | date:'dd/MM/yyyy' }}
+    </p>
+
+    <ion-button
+      (click)="alternarFavorito()"
+      [color]="ejercicio.favorito ? 'warning' : 'primary'">
+      {{ ejercicio.favorito ? 'Quitar favorito' : 'Añadir favorito' }}
+    </ion-button>
+  </ion-card-content>
+</ion-card>
