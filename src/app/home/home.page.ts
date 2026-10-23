@@ -1,4 +1,6 @@
 
+
+
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -6,7 +8,14 @@ import {
   IonHeader,
   IonToolbar,
   IonTitle,
-  IonContent
+  IonContent,
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardContent
 } from '@ionic/angular';
 
 import { Ejercicio } from '../interfaces/ejercicio';
@@ -23,6 +32,13 @@ import { EjercicioItemComponent } from '../components/ejercicio-item/ejercicio-i
     IonToolbar,
     IonTitle,
     IonContent,
+    IonGrid,
+    IonRow,
+    IonCol,
+    IonCard,
+    IonCardHeader,
+    IonCardTitle,
+    IonCardContent,
     EjercicioItemComponent
   ]
 })
