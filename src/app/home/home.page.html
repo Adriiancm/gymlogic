@@ -1,4 +1,5 @@
 
+
 <ion-header>
   <ion-toolbar>
     <ion-title>GymLog</ion-title>
@@ -7,6 +8,11 @@
 
 <ion-content class="ion-padding">
   <h1>Mis ejercicios</h1>
+
+  <ion-button expand="block" (click)="anadirEjercicio()">
+    <ion-icon name="add-outline" slot="start"></ion-icon>
+    Añadir ejercicio
+  </ion-button>
 
   <ion-grid>
     <ion-row>

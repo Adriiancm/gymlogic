@@ -1,2 +1,26 @@
 // For information on how to create your own theme, please refer to:
 // https://ionicframework.com/docs/theming/
+
+
+:root {
+  /* Color principal de GymLog */
+  --ion-color-primary: #B8F34A;
+  --ion-color-primary-rgb: 184, 243, 74;
+  --ion-color-primary-contrast: #171A1C;
+  --ion-color-primary-contrast-rgb: 23, 26, 28;
+  --ion-color-primary-shade: #a2d640;
+  --ion-color-primary-tint: #c1f45c;
+
+  /* Colores de la interfaz */
+  --ion-background-color: #171A1C;
+  --ion-text-color: #F5F7F2;
+  --ion-card-background: #252B2D;
+  --ion-item-background: #252B2D;
+  --ion-toolbar-background: #171A1C;
+  --ion-toolbar-color: #F5F7F2;
+  --ion-border-color: #3B4244;
+
+  /* Colores propios de GymLog */
+  --gymlog-surface: #252B2D;
+  --gymlog-muted: #B8C0C2;
+}
