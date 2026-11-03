@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Ajustes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h1>Configuración</h1>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        <h2>Modo oscuro</h2>
+        <p>Cambiar entre tema claro y oscuro</p>
+      </ion-label>
+
+      <ion-toggle
+        [checked]="settingsService.isDarkMode()"
+        (ionChange)="cambiarTema($event)">
+      </ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>

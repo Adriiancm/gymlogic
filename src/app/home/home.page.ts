@@ -1,6 +1,7 @@
 
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 import {
   IonHeader,
@@ -11,11 +12,12 @@ import {
   IonRow,
   IonCol,
   IonButton,
-  IonIcon
+  IonIcon,
+  IonButtons
 } from '@ionic/angular';
 
 import { addIcons } from 'ionicons';
-import { addOutline } from 'ionicons/icons';
+import { addOutline, settingsOutline } from 'ionicons/icons';
 
 import { Ejercicio } from '../interfaces/ejercicio';
 import { EjercicioItemComponent } from '../components/ejercicio-item/ejercicio-item.component';
@@ -27,6 +29,7 @@ import { EjercicioItemComponent } from '../components/ejercicio-item/ejercicio-i
   standalone: true,
   imports: [
     CommonModule,
+    RouterLink,
     IonHeader,
     IonToolbar,
     IonTitle,
@@ -36,13 +39,14 @@ import { EjercicioItemComponent } from '../components/ejercicio-item/ejercicio-i
     IonCol,
     IonButton,
     IonIcon,
+    IonButtons,
     EjercicioItemComponent
   ]
 })
 export class HomePage {
 
   constructor() {
-    addIcons({ addOutline });
+    addIcons({ addOutline, settingsOutline });
   }
 
   listaDeEjercicios: Ejercicio[] = [
