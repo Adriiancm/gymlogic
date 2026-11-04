@@ -6,4 +6,5 @@ export interface Ejercicio {
   descripcion: string;
   favorito: boolean;
   fechaRegistro: string;
+  imagen: string;
 }

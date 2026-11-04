@@ -1,4 +1,3 @@
-
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -58,6 +57,7 @@ export class HomePage {
       descripcion: 'Ejercicio para trabajar el pecho.',
       favorito: true,
       fechaRegistro: '2026-10-12',
+      imagen: 'https://picsum.photos/200/300'
     },
     {
       id: 2,
@@ -67,6 +67,7 @@ export class HomePage {
       descripcion: 'Ejercicio para trabajar las piernas.',
       favorito: false,
       fechaRegistro: '2026-10-12',
+      imagen: 'https://picsum.photos/200/300'
     },
     {
       id: 3,
@@ -76,6 +77,7 @@ export class HomePage {
       descripcion: 'Ejercicio para trabajar los bíceps.',
       favorito: true,
       fechaRegistro: '2026-10-12',
+      imagen: 'https://picsum.photos/200/300'
     },
     {
       id: 4,
@@ -85,6 +87,7 @@ export class HomePage {
       descripcion: 'Trabaja la espalda y los glúteos.',
       favorito: false,
       fechaRegistro: '2026-10-23',
+      imagen: 'https://picsum.photos/200/300'
     },
     {
       id: 5,
@@ -94,6 +97,7 @@ export class HomePage {
       descripcion: 'Fortalece los hombros y los tríceps.',
       favorito: false,
       fechaRegistro: '2026-10-23',
+      imagen: 'https://picsum.photos/200/300'
     },
     {
       id: 6,
@@ -103,6 +107,7 @@ export class HomePage {
       descripcion: 'Ejercicio para trabajar los dorsales.',
       favorito: false,
       fechaRegistro: '2026-10-23',
+      imagen: 'https://picsum.photos/200/300'
     },
     {
       id: 7,
@@ -112,6 +117,7 @@ export class HomePage {
       descripcion: 'Fortalece los músculos del tríceps.',
       favorito: false,
       fechaRegistro: '2026-10-23',
+      imagen: 'https://picsum.photos/200/300'
     },
     {
       id: 8,
@@ -121,6 +127,7 @@ export class HomePage {
       descripcion: 'Trabaja la parte lateral de los hombros.',
       favorito: false,
       fechaRegistro: '2026-10-23',
+      imagen: 'https://picsum.photos/200/300'
     }
   ];
 

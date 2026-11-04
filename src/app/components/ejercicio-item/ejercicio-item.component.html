@@ -1,4 +1,11 @@
+
 <ion-card>
+  <img
+    [src]="ejercicio.imagen"
+    [alt]="'Imagen de ' + ejercicio.nombre"
+    class="imagen-ejercicio"
+  />
+
   <ion-item>
     <ion-label>
       <h2>{{ ejercicio.nombre }}</h2>
@@ -10,13 +17,9 @@
   <ion-card-content>
     <p>{{ ejercicio.descripcion }}</p>
 
-
-
     <p>
       Registrado:
       {{ ejercicio.fechaRegistro | date:'dd/MM/yyyy' }}
     </p>
-
-
   </ion-card-content>
 </ion-card>
