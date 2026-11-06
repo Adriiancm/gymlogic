@@ -1,7 +1,6 @@
+
 // For information on how to create your own theme, please refer to:
 // https://ionicframework.com/docs/theming/
-
-
 
 /*
  * Tema de GymLog
@@ -9,6 +8,9 @@
  */
 
 :root {
+  /* Tipografía */
+  --ion-font-family: 'Montserrat', sans-serif;
+
   /* Color principal: verde lima */
   --ion-color-primary: #B8F34A;
   --ion-color-primary-rgb: 184, 243, 74;

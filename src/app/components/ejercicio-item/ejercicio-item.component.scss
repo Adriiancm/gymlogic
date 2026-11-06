@@ -1,7 +1,52 @@
 
+ion-card {
+  margin: 4px;
+  border-radius: 12px;
+}
+
 .imagen-ejercicio {
   width: 100%;
-  height: 180px;
+  height: 140px;
   object-fit: cover;
   display: block;
+}
+
+ion-item {
+  --min-height: 35px;
+  --padding-start: 8px;
+  --inner-padding-end: 8px;
+}
+
+.nombre-ejercicio {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 800;
+  margin: 7px 0 9px;
+  color: var(--ion-text-color);
+}
+
+.datos-ejercicio {
+  text-align: left;
+  line-height: 1.3;
+}
+
+.datos-ejercicio p {
+  font-size: 11px;
+  margin: 4px 0;
+  color: var(--ion-text-color);
+}
+
+ion-card-content {
+  padding: 7px 9px 9px;
+}
+
+.descripcion-ejercicio {
+  font-size: 11px;
+  margin: 0 0 7px;
+}
+
+.fecha-ejercicio {
+  font-size: 10px;
+  margin: 0;
+  color: var(--gymlog-muted);
 }

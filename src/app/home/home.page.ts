@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -16,7 +17,7 @@ import {
 } from '@ionic/angular';
 
 import { addIcons } from 'ionicons';
-import { addOutline, settingsOutline } from 'ionicons/icons';
+import { addOutline, settingsOutline, barbellOutline } from 'ionicons/icons';
 
 import { Ejercicio } from '../interfaces/ejercicio';
 import { EjercicioItemComponent } from '../components/ejercicio-item/ejercicio-item.component';
@@ -45,7 +46,7 @@ import { EjercicioItemComponent } from '../components/ejercicio-item/ejercicio-i
 export class HomePage {
 
   constructor() {
-    addIcons({ addOutline, settingsOutline });
+    addIcons({ addOutline, settingsOutline, barbellOutline });
   }
 
   listaDeEjercicios: Ejercicio[] = [
