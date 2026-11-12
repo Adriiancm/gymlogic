@@ -8,7 +8,8 @@ import {
   IonLabel,
   IonCardContent,
   IonButton,
-  IonIcon
+  IonIcon,
+  IonImg
 } from '@ionic/angular';
 
 import { addIcons } from 'ionicons';
@@ -28,7 +29,8 @@ import { Ejercicio } from '../../interfaces/ejercicio';
     IonLabel,
     IonCardContent,
     IonButton,
-    IonIcon
+    IonIcon,
+    IonImg
   ]
 })
 export class EjercicioItemComponent {

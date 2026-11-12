@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -7,7 +8,8 @@ import {
   IonRow,
   IonCol,
   IonButton,
-  IonIcon, IonHeader, IonToolbar, IonTitle, IonButtons } from '@ionic/angular';
+  IonIcon
+} from '@ionic/angular';
 
 import { addIcons } from 'ionicons';
 import { addOutline } from 'ionicons/icons';
@@ -21,7 +23,7 @@ import { HeaderComponent } from '../components/header/header.component';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonButtons, IonTitle, IonToolbar, IonHeader, 
+  imports: [
     CommonModule,
     IonContent,
     IonGrid,
@@ -48,7 +50,7 @@ export class HomePage {
       descripcion: 'Ejercicio para trabajar el pecho.',
       favorito: true,
       fechaRegistro: '2026-10-12',
-      imagen: 'https://picsum.photos/200/300'
+      imagen: 'assets/ejercicios/pressbanca.jpg'
     },
     {
       id: 2,
@@ -58,7 +60,7 @@ export class HomePage {
       descripcion: 'Ejercicio para trabajar las piernas.',
       favorito: false,
       fechaRegistro: '2026-10-12',
-      imagen: 'https://picsum.photos/200/300'
+      imagen: 'assets/ejercicios/sentadilla.jpg'
     },
     {
       id: 3,
@@ -68,7 +70,7 @@ export class HomePage {
       descripcion: 'Ejercicio para trabajar los bíceps.',
       favorito: true,
       fechaRegistro: '2026-10-12',
-      imagen: 'https://picsum.photos/200/300'
+      imagen: 'assets/ejercicios/curlbiceps.jpg'
     },
     {
       id: 4,
@@ -78,7 +80,7 @@ export class HomePage {
       descripcion: 'Trabaja la espalda y los glúteos.',
       favorito: false,
       fechaRegistro: '2026-10-23',
-      imagen: 'https://picsum.photos/200/300'
+      imagen: 'assets/ejercicios/peso muerto.jpg'
     },
     {
       id: 5,
@@ -88,7 +90,7 @@ export class HomePage {
       descripcion: 'Fortalece los hombros y los tríceps.',
       favorito: false,
       fechaRegistro: '2026-10-23',
-      imagen: 'https://picsum.photos/200/300'
+      imagen: 'assets/ejercicios/press militar.jpg'
     },
     {
       id: 6,
@@ -98,7 +100,7 @@ export class HomePage {
       descripcion: 'Ejercicio para trabajar los dorsales.',
       favorito: false,
       fechaRegistro: '2026-10-23',
-      imagen: 'https://picsum.photos/200/300'
+      imagen: 'assets/ejercicios/jalonalpecho.jpg'
     },
     {
       id: 7,
@@ -108,7 +110,7 @@ export class HomePage {
       descripcion: 'Fortalece los músculos del tríceps.',
       favorito: false,
       fechaRegistro: '2026-10-23',
-      imagen: 'https://picsum.photos/200/300'
+      imagen: 'assets/ejercicios/extensiondetriceps.jpg'
     },
     {
       id: 8,
@@ -118,7 +120,7 @@ export class HomePage {
       descripcion: 'Trabaja la parte lateral de los hombros.',
       favorito: false,
       fechaRegistro: '2026-10-23',
-      imagen: 'https://picsum.photos/200/300'
+      imagen: 'assets/ejercicios/elevacioneslaterales.jpg'
     }
   ];
 

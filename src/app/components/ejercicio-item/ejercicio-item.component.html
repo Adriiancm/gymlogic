@@ -1,7 +1,12 @@
+
 <ng-container *ngIf="ejercicio as item">
   <ion-card [class.ejercicio-favorito]="item.favorito">
 
-    <img [src]="item.imagen" [alt]="'Imagen de ' + item.nombre" class="imagen-ejercicio" />
+    <ion-img
+      [src]="item.imagen"
+      [alt]="'Imagen de ' + item.nombre"
+      class="imagen-ejercicio">
+    </ion-img>
 
     <ion-item lines="none">
       <ion-label>
@@ -10,10 +15,15 @@
         <p>Dificultad: {{ item.dificultad }}</p>
       </ion-label>
 
-      <ion-button slot="end" fill="clear" [color]="item.favorito ? 'danger' : 'medium'" (click)="alternarFavorito()"
+      <ion-button
+        slot="end"
+        fill="clear"
+        [color]="item.favorito ? 'danger' : 'medium'"
+        (click)="alternarFavorito()"
         [attr.aria-label]="item.favorito ? 'Quitar de favoritos' : 'Añadir a favoritos'">
-        <ion-icon [name]="item.favorito ? 'heart' : 'heart-outline'">
-        </ion-icon>
+
+        <ion-icon [name]="item.favorito ? 'heart' : 'heart-outline'"></ion-icon>
+
       </ion-button>
     </ion-item>
 

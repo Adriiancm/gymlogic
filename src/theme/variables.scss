@@ -1,4 +1,5 @@
 
+
 // For information on how to create your own theme, please refer to:
 // https://ionicframework.com/docs/theming/
 
@@ -18,6 +19,24 @@
   --ion-color-primary-contrast-rgb: 23, 26, 28;
   --ion-color-primary-shade: #a2d640;
   --ion-color-primary-tint: #c1f45c;
+
+  /* Color secundario: gris azulado */
+  --ion-color-secondary: #64748B;
+  --ion-color-secondary-rgb: 100, 116, 139;
+  --ion-color-secondary-contrast: #FFFFFF;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #58657A;
+  --ion-color-secondary-tint: #748398;
+}
+
+/* Configuración del color secundario para Ionic */
+.ion-color-secondary {
+  --ion-color-base: var(--ion-color-secondary);
+  --ion-color-base-rgb: var(--ion-color-secondary-rgb);
+  --ion-color-contrast: var(--ion-color-secondary-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-secondary-contrast-rgb);
+  --ion-color-shade: var(--ion-color-secondary-shade);
+  --ion-color-tint: var(--ion-color-secondary-tint);
 }
 
 /* MODO OSCURO */
