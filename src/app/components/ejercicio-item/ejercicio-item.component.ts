@@ -1,3 +1,4 @@
+
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -6,8 +7,12 @@ import {
   IonItem,
   IonLabel,
   IonCardContent,
-  IonButton
+  IonButton,
+  IonIcon
 } from '@ionic/angular';
+
+import { addIcons } from 'ionicons';
+import { heart, heartOutline } from 'ionicons/icons';
 
 import { Ejercicio } from '../../interfaces/ejercicio';
 
@@ -22,13 +27,21 @@ import { Ejercicio } from '../../interfaces/ejercicio';
     IonItem,
     IonLabel,
     IonCardContent,
-    IonButton
+    IonButton,
+    IonIcon
   ]
 })
 export class EjercicioItemComponent {
-  @Input() ejercicio!: Ejercicio;
+
+  @Input() ejercicio: Ejercicio | undefined;
+
+  constructor() {
+    addIcons({ heart, heartOutline });
+  }
 
   alternarFavorito(): void {
-    this.ejercicio.favorito = !this.ejercicio.favorito;
+    if (this.ejercicio) {
+      this.ejercicio.favorito = !this.ejercicio.favorito;
+    }
   }
 }

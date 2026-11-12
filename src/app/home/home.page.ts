@@ -1,52 +1,42 @@
-
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
 
 import {
-  IonHeader,
-  IonToolbar,
-  IonTitle,
   IonContent,
   IonGrid,
   IonRow,
   IonCol,
   IonButton,
-  IonIcon,
-  IonButtons
-} from '@ionic/angular';
+  IonIcon, IonHeader, IonToolbar, IonTitle, IonButtons } from '@ionic/angular';
 
 import { addIcons } from 'ionicons';
-import { addOutline, settingsOutline, barbellOutline } from 'ionicons/icons';
+import { addOutline } from 'ionicons/icons';
 
 import { Ejercicio } from '../interfaces/ejercicio';
 import { EjercicioItemComponent } from '../components/ejercicio-item/ejercicio-item.component';
+import { HeaderComponent } from '../components/header/header.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [
+  imports: [IonButtons, IonTitle, IonToolbar, IonHeader, 
     CommonModule,
-    RouterLink,
-    IonHeader,
-    IonToolbar,
-    IonTitle,
     IonContent,
     IonGrid,
     IonRow,
     IonCol,
     IonButton,
     IonIcon,
-    IonButtons,
-    EjercicioItemComponent
+    EjercicioItemComponent,
+    HeaderComponent
   ]
 })
 export class HomePage {
 
   constructor() {
-    addIcons({ addOutline, settingsOutline, barbellOutline });
+    addIcons({ addOutline });
   }
 
   listaDeEjercicios: Ejercicio[] = [
@@ -132,7 +122,7 @@ export class HomePage {
     }
   ];
 
-  anadirEjercicio() {
+  anadirEjercicio(): void {
     console.log('Botón Añadir ejercicio pulsado');
   }
 

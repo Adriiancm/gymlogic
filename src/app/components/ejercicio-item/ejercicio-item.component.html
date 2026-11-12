@@ -1,25 +1,30 @@
+<ng-container *ngIf="ejercicio as item">
+  <ion-card [class.ejercicio-favorito]="item.favorito">
 
-<ion-card>
-  <img
-    [src]="ejercicio.imagen"
-    [alt]="'Imagen de ' + ejercicio.nombre"
-    class="imagen-ejercicio"
-  />
+    <img [src]="item.imagen" [alt]="'Imagen de ' + item.nombre" class="imagen-ejercicio" />
 
-  <ion-item>
-    <ion-label>
-      <h2>{{ ejercicio.nombre }}</h2>
-      <p>Grupo muscular: {{ ejercicio.grupoMuscular }}</p>
-      <p>Dificultad: {{ ejercicio.dificultad }}</p>
-    </ion-label>
-  </ion-item>
+    <ion-item lines="none">
+      <ion-label>
+        <h2>{{ item.nombre }}</h2>
+        <p>Grupo muscular: {{ item.grupoMuscular }}</p>
+        <p>Dificultad: {{ item.dificultad }}</p>
+      </ion-label>
 
-  <ion-card-content>
-    <p>{{ ejercicio.descripcion }}</p>
+      <ion-button slot="end" fill="clear" [color]="item.favorito ? 'danger' : 'medium'" (click)="alternarFavorito()"
+        [attr.aria-label]="item.favorito ? 'Quitar de favoritos' : 'Añadir a favoritos'">
+        <ion-icon [name]="item.favorito ? 'heart' : 'heart-outline'">
+        </ion-icon>
+      </ion-button>
+    </ion-item>
 
-    <p>
-      Registrado:
-      {{ ejercicio.fechaRegistro | date:'dd/MM/yyyy' }}
-    </p>
-  </ion-card-content>
-</ion-card>
+    <ion-card-content>
+      <p>{{ item.descripcion }}</p>
+
+      <p>
+        Registrado:
+        {{ item.fechaRegistro | date:'dd/MM/yyyy' }}
+      </p>
+    </ion-card-content>
+
+  </ion-card>
+</ng-container>
