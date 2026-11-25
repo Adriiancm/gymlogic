@@ -1,6 +1,7 @@
 
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import {
   IonContent,
@@ -8,7 +9,13 @@ import {
   IonRow,
   IonCol,
   IonButton,
-  IonIcon
+  IonIcon,
+  IonList,
+  IonItem,
+  IonInput,
+  IonSelect,
+  IonSelectOption,
+  IonTextarea
 } from '@ionic/angular';
 
 import { addIcons } from 'ionicons';
@@ -25,12 +32,19 @@ import { HeaderComponent } from '../components/header/header.component';
   standalone: true,
   imports: [
     CommonModule,
+    FormsModule,
     IonContent,
     IonGrid,
     IonRow,
     IonCol,
     IonButton,
     IonIcon,
+    IonList,
+    IonItem,
+    IonInput,
+    IonSelect,
+    IonSelectOption,
+    IonTextarea,
     EjercicioItemComponent,
     HeaderComponent
   ]
@@ -124,8 +138,54 @@ export class HomePage {
     }
   ];
 
-  anadirEjercicio(): void {
-    console.log('Botón Añadir ejercicio pulsado');
+  nuevoEjercicio: Ejercicio = {
+    id: 0,
+    nombre: '',
+    grupoMuscular: '',
+    dificultad: 'Principiante',
+    descripcion: '',
+    favorito: false,
+    fechaRegistro: new Date().toISOString().slice(0, 10),
+    imagen: 'assets/ejercicios/pressbanca.jpg'
+  };
+
+  agregarEjercicio(): void {
+
+    if (
+      !this.nuevoEjercicio.nombre.trim() ||
+      !this.nuevoEjercicio.grupoMuscular
+    ) {
+      return;
+    }
+
+    const imagenes: { [grupo: string]: string } = {
+      'Pecho': 'assets/ejercicios/pressbanca.jpg',
+      'Piernas': 'assets/ejercicios/sentadilla.jpg',
+      'Brazos': 'assets/ejercicios/curlbiceps.jpg',
+      'Espalda': 'assets/ejercicios/jalonalpecho.jpg',
+      'Hombros': 'assets/ejercicios/press militar.jpg',
+      'Espalda y piernas': 'assets/ejercicios/peso muerto.jpg'
+    };
+
+    const ejercicio: Ejercicio = {
+      ...this.nuevoEjercicio,
+      id: Date.now(),
+      imagen: imagenes[this.nuevoEjercicio.grupoMuscular] ||
+        'assets/ejercicios/pressbanca.jpg'
+    };
+
+    this.listaDeEjercicios.unshift(ejercicio);
+
+    this.nuevoEjercicio = {
+      id: 0,
+      nombre: '',
+      grupoMuscular: '',
+      dificultad: 'Principiante',
+      descripcion: '',
+      favorito: false,
+      fechaRegistro: new Date().toISOString().slice(0, 10),
+      imagen: 'assets/ejercicios/pressbanca.jpg'
+    };
   }
 
 }
